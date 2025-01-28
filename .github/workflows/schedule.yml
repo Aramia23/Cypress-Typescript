@@ -30,5 +30,5 @@ jobs:
         - uses: actions/upload-artifact@master
           with:
             name: reporte.html
-            path: ./Cypress-Typescript/cypress/reports/html/index.html
+            path: Cypress-Typescript/cypress/reports/html/index.html
         
