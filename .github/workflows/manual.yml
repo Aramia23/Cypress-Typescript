@@ -22,9 +22,6 @@ jobs:
     # Runs a single command using the runners shell
         - name: Checkout
           uses: actions/checkout@v4.2.2
-
-        - name: NPM Install
-          run: npm ci
       
         - name: Integration Tests
           run: test-chrome
