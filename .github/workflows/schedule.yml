@@ -29,6 +29,6 @@ jobs:
 
         - uses: actions/upload-artifact@master
           with:
-            name: digibank.war
-            path: ./target/*cypress-typescript*.war
+            name: reporte.html
+            path: ./Cypress-Typescript/cypress/reports/html/index.html
         
