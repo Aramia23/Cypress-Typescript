@@ -1,0 +1,33 @@
+# This is a basic workflow that is manually triggered
+
+name: nightly build at 11pm
+
+on:
+  schedule:
+    - cron: '0 23 * * *'
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "greet"
+  nightly_build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Runs a single command using the runners shell
+        - name: Checkout
+          uses: actions/checkout@v4.2.2
+
+        - name: Node
+          run: npm install
+      
+        - name: Integration Tests
+          run: npm run test-chrome
+
+        - uses: actions/upload-artifact@master
+          with:
+            name: digibank.war
+            path: ./target/*cypress-typescript*.war
+        
