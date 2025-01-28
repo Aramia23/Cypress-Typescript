@@ -17,6 +17,6 @@
 import './commands/global-commands'
 //import '../support/Commands/todo-commands-backend'
 import '../support/commands/todo-commands-frontend'
-
+import 'cypress-mochawesome-reporter/register';
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
